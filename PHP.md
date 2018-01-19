@@ -12,7 +12,7 @@ PHP一种运行在web服务器端的编程语言。<br>
         echo "hello php";
     ?><br>
 需要注意点：<br>
-&emsp;&emsp;;1.在php中每一条语句结尾处一定用";"，<br>
+&emsp;&emsp;1.在php中每一条语句结尾处一定用";",<br>
 &emsp;&emsp;2.在PHP中<?php ?>不是成对出现，但是一个php文件中只有一个<?php
 
 **三、基本的输出语句**<br>
@@ -42,7 +42,7 @@ PHP一种运行在web服务器端的编程语言。<br>
 ③__LINE__ :PHP程序文件行数。它可以告诉我们，当前代码在第几行。<br>
 ④PHP_VERSION:当前解析器的版本号。它可以告诉我们当前PHP解析器的版本号，我们可以提前知道我们的PHP代码是否可被该PHP解析器解析。<br>
 ⑤PHP_OS：执行当前PHP版本的操作系统名称。它可以告诉我们服务器所用的操作系统名称。<br>
-<h6 color='red'>如何判断常量是否被定义</h6>
+<h5>如何判断常量是否被定义</h5>
 如果常量被重复定义以后，PHP解析器会发出“Constant XXX already defined”的警告。<br>
 eg:<br>
 define(“PI”,3.14);
