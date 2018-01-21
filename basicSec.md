@@ -12,7 +12,7 @@
 &emsp;①while  在if-else中不执行if中语句就执行else中语句（条件为真则执行）<br>
 &emsp;②do..while if..else<br>
 &emsp;③for<br>
-&emsp;④foreach<br>
+&emsp;④foreach
 
 **二、数组**<br>
 定义：有限个类型相同的变量的集合（在php中数组以键值对的形式存储）。<br>
@@ -24,7 +24,7 @@
 &emsp;&emsp;②用array()创建一个空数组，使用=>符号来分隔键和值，左侧表示键，右侧表示值。键一定是整数，eg:array('0'=>'苹果');<br>
 &emsp;&emsp;③用array()创建一个空数组，直接在数组里用英文的单引号'或者英文的双引号"赋值，比如array('苹果');这个数组相当于array('0'=>'苹果');<br>
 &emsp;注意：<br>
-&emsp;&emsp;<1>数组默认索引值从“0”开始<br>  
+&emsp;&emsp;<1>数组默认索引值从“0”开始<br>
 &emsp;&emsp;<2>定义一个空的数组<br>
 &emsp;&emsp;&emsp;&：$arr=[];//有的这样定义一个数组会报错是因为php的版本低，升级一下PHP的版本就可以了
 &emsp;&emsp;&emsp;&：$arr=array();
@@ -62,7 +62,8 @@
 &emsp;&emsp;foreach($fruit as $key => $value){<br>
 &emsp;&emsp;&emsp;echo '键值名：'.$key.",其值：".$value;<br>
 &emsp;&emsp;}<br>
-&emsp;&emsp;③for循环<br>
+&emsp;&emsp;③for循环
+
 &emsp;**三、数组的操作**<br>
 &emsp;&emsp;1>_数组中添加一个或多个元素_<br>
 &emsp;&emsp;末尾添加：array_push()   eg:array_push($arr,"a","b");//返回数组长度  <br>
