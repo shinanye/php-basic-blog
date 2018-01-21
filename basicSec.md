@@ -18,15 +18,14 @@
 定义：有限个类型相同的变量的集合（在php中数组以键值对的形式存储）。<br>
 类型：索引数组、关联数组<br>
 &emsp;1.索引数组<br>
-&emsp;&emsp; 定义：索引数组是指数组的键是整数的数组，并且键的整数顺序是从0开始，依次类推。<br>
-
+&emsp;&emsp; 定义：索引数组是指数组的键是整数的数组，并且键的整数顺序是从0开始，依次类推。
 &emsp;&emsp;1>_索引数组赋值的方法：_<br>
 &emsp;&emsp;①用数组变量的名字后面跟一个中括号的方式赋值。eg:array[0]='123456';<br>
 &emsp;&emsp;②用array()创建一个空数组，使用=>符号来分隔键和值，左侧表示键，右侧表示值。键一定是整数，eg:array('0'=>'苹果');<br>
 &emsp;&emsp;③用array()创建一个空数组，直接在数组里用英文的单引号'或者英文的双引号"赋值，比如array('苹果');这个数组相当于array('0'=>'苹果');<br>
 &emsp;注意：<br>
-&emsp;&emsp;*数组默认索引值从“0”开始<br>  
-&emsp;&emsp;* 定义一个空的数组<br>
+&emsp;&emsp;<1>数组默认索引值从“0”开始<br>  
+&emsp;&emsp;<2>定义一个空的数组<br>
 &emsp;&emsp;&emsp;&：$arr=[];//有的这样定义一个数组会报错是因为php的版本低，升级一下PHP的版本就可以了
 &emsp;&emsp;&emsp;&：$arr=array();
 
@@ -47,7 +46,7 @@
 
 &emsp;&emsp;foreach访问数组：<br> 
 &emsp;&emsp;foreach($fruit as $k=>$v){<br> 
-&emsp;&emsp;&emsp;echo '<br>第'.$k.'值是：'.$v;<br> 
+&emsp;&emsp;&emsp;echo '第'.$k.'值是：'.$v;<br> 
 &emsp;&emsp;}<br> 
 &emsp;2.关联数组<br>
 &emsp;&emsp;关联数组是指数组的键是"字符串"的数组。<br>
@@ -57,8 +56,7 @@
 &emsp;&emsp;①数组后面跟一个中括号的方式赋值，eg：$arr['apple'] = '苹果';<br>
 &emsp;&emsp;②创建一个空的数组，用“=>”符号来分隔键和值，键一定要是“字符串”， eg:array('apple'=>'苹果')；<br><br>
 &emsp;&emsp;3>_访问数组_<br>
-&emsp;&emsp;①键值索引<br>
-&emsp;&emsp;eg:$fruit0 = $fruit['apple'];<br> 
+&emsp;&emsp;①键值索引----------eg:$fruit0 = $fruit['apple'];<br> 
 &emsp;&emsp;②foreach循环<br>
 &emsp;&emsp;eg：<br>
 &emsp;&emsp;foreach($fruit as $key => $value){<br>
@@ -68,13 +66,13 @@
 &emsp;**三、数组的操作**<br>
 &emsp;&emsp;1>_数组中添加一个或多个元素_<br>
 &emsp;&emsp;末尾添加：array_push()   eg:array_push($arr,"a","b");//返回数组长度  <br>
-&emsp;&emsp;开始添加：array_unshift()   eg:array_unshift($arr);   //所有的数值键名改为从零开始，所有的文字键名保持不变  <br>
-&emsp;&emsp;2>_数组中删除一个元素_<br><br>
+&emsp;&emsp;开始添加：array_unshift()   eg:array_unshift($arr);   //所有的数值键名改为从零开始，所有的文字键名保持不变  <br><br>
+&emsp;&emsp;2>_数组中删除一个元素_<br>
 &emsp;&emsp;末尾删除：array_pop()    eg:array_pop($arr);   //返回删除的元素，如果数组为空（或者不是数组）则会返回NULL   <br>
 &emsp;&emsp;开始删除：array_shift()   eg:array_shift($arr);<br>
 &emsp;&emsp;注意：<br>
 &emsp;&emsp;这四个方法都会改变原数组,添加返回的都是数组的长度，删除返回的都是删除的元素。<br><br>
-&emsp;&emsp;3>_任意位置添加（删除）一个或者多个元素_<br><br>
+&emsp;&emsp;3>_任意位置添加（删除）一个或者多个元素_<br>
 &emsp;&emsp;语法： array_splice(数组名,起始索引值,删除个数,添加的内容); <br>
 &emsp;&emsp;第三个参数：不为0删除元素的个数； <br>
 &emsp;&emsp;第四个参数：有就是要添加的内容； <br>
@@ -96,7 +94,7 @@
 &emsp;&emsp;$arr2=array("apple"=>"苹果2");<br>
 &emsp;&emsp;$mergeArr=array_merge($arr1,$arr2);<br>
 &emsp;&emsp;print_r($mergeArr);<br>
-&emsp;&emsp;输出：Array ( [apple] => 苹果2 [banana] => 香蕉 [pear] => 梨 );<br>
+&emsp;&emsp;输出：Array ( [apple] => 苹果2 [banana] => 香蕉 [pear] => 梨 );<br><br>
 &emsp;&emsp;5>in_array()-----在一个函数中汇总搜索一个特定的数组，数组存在则返回true，否则false；<br>
 &emsp;&emsp;语法：in_array(汇总数组,查询数组);<br>
 &emsp;&emsp;eg:<br>

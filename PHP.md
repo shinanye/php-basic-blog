@@ -34,9 +34,9 @@ PHP一种运行在web服务器端的编程语言。<br>
 定义：常量被定义后在脚本其他位置都不可以改变其值。常量的声明没有“$”<br>
 分类：自定义常量和系统常量<br>
 自定义常量：<br>
-①Define()----define("PI",3.14);
-②Const()----Const PI=2.0;;
-常见的系统常量：
+①Define()----define("PI",3.14);<br>
+②Const()----Const PI=2.0;<br>
+常见的系统常量：<br>
 ①__FILE__:php程序文件名。它可以帮助我们获取当前文件在服务器的物理位置。<br>
 ② __DIR__; 程序的根目录<br>
 ③__LINE__ :PHP程序文件行数。它可以告诉我们，当前代码在第几行。<br>
@@ -45,7 +45,7 @@ PHP一种运行在web服务器端的编程语言。<br>
 <h5>如何判断常量是否被定义</h5>
 如果常量被重复定义以后，PHP解析器会发出“Constant XXX already defined”的警告。<br>
 eg:<br>
-define(“PI”,3.14);
+define(“PI”,3.14);<br>
 $is2 = defined("PI");  //true<br>
 
 **六、变量数据类型**<br>
