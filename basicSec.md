@@ -26,28 +26,33 @@
 &emsp;注意：<br>
 &emsp;&emsp;<1>数组默认索引值从“0”开始<br>
 &emsp;&emsp;<2>定义一个空的数组<br>
-&emsp;&emsp;&emsp;&：$arr=[];//有的这样定义一个数组会报错是因为php的版本低，升级一下PHP的版本就可以了
-&emsp;&emsp;&emsp;&：$arr=array();
+&emsp;&emsp;&emsp;&：$arr=[];//有的这样定义一个数组会报错是因为php的版本低，升级一下PHP的版本就可以了<br>
+&emsp;&emsp;&emsp;&：$arr=array();<br>
 
-&emsp;&emsp;&emsp;2>_访问数组_<br>
+&emsp;&emsp;2>_访问数组_<br>
 &emsp;&emsp;①数组变量的中括号跟该访问的键值;<br> 
 &emsp;&emsp;②for循环;<br> 
 &emsp;&emsp;③foreach;<br> 
 &emsp;&emsp; eg:<br> 
-&emsp;&emsp;索引值查找：<br> 
-&emsp;&emsp;$fruit=array('苹果','香蕉','菠萝');<br> 
-&emsp;&emsp;$fruit0 = $fruit['0'];<br> 
-&emsp;&emsp;print_r($fruit0);//结果为苹果<br> 
+&emsp;&emsp;索引值查找：
+```
+$fruit=array('苹果','香蕉','菠萝'); 
+$fruit0 = $fruit['0'];
+print_r($fruit0);//结果为苹果
+```
+&emsp;&emsp;for访问数组：
+```
+for($i=0; $i<3; $i++){
+echo '<br>数组第'.$i.'值是：'.$fruit[$i];
+}
+```
+&emsp;&emsp;foreach访问数组：
+```
+foreach($fruit as $k=>$v){
+echo '第'.$k.'值是：'.$v;
+}
 
-&emsp;&emsp;for访问数组：<br> 
-&emsp;&emsp;for($i=0; $i<3; $i++){<br> 
-&emsp;&emsp;&emsp;echo '<br>数组第'.$i.'值是：'.$fruit[$i];<br> 
-&emsp;&emsp;}<br> 
-
-&emsp;&emsp;foreach访问数组：<br> 
-&emsp;&emsp;foreach($fruit as $k=>$v){<br> 
-&emsp;&emsp;&emsp;echo '第'.$k.'值是：'.$v;<br> 
-&emsp;&emsp;}<br> 
+```
 &emsp;2.关联数组<br>
 &emsp;&emsp;关联数组是指数组的键是"字符串"的数组。<br>
 &emsp;&emsp;1> _关联数组的初始化：_<br>
@@ -62,7 +67,7 @@
 &emsp;&emsp;foreach($fruit as $key => $value){<br>
 &emsp;&emsp;&emsp;echo '键值名：'.$key.",其值：".$value;<br>
 &emsp;&emsp;}<br>
-&emsp;&emsp;③for循环
+&emsp;&emsp;③for循环<br>
 
 &emsp;**三、数组的操作**<br>
 &emsp;&emsp;1>_数组中添加一个或多个元素_<br>

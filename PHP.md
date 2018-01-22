@@ -8,11 +8,13 @@ PHP一种运行在web服务器端的编程语言。<br>
 &emsp;4.免费<br>
 
 **二、php代码标识：**<br>
-    <?php<br>
-        echo "hello php";
-    ?><br>
+```
+<?php
+   echo "hello php";
+?>
+```
 需要注意点：<br>
-&emsp;&emsp;1.在php中每一条语句结尾处一定用";",<br>
+&emsp;&emsp;1.在php中每一条语句结尾处一定用";"<br>
 &emsp;&emsp;2.在PHP中<?php ?>不是成对出现，但是一个php文件中只有一个<?php
 
 **三、基本的输出语句**<br>
@@ -44,7 +46,7 @@ PHP一种运行在web服务器端的编程语言。<br>
 ⑤PHP_OS：执行当前PHP版本的操作系统名称。它可以告诉我们服务器所用的操作系统名称。<br>
 <h5>如何判断常量是否被定义</h5>
 如果常量被重复定义以后，PHP解析器会发出“Constant XXX already defined”的警告。<br>
-eg:<br>
+eg:
 ```
 define(“PI”,3.14);
 $is2 = defined("PI");  //true
