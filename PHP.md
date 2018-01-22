@@ -47,9 +47,11 @@ PHP一种运行在web服务器端的编程语言。<br>
 <h5>如何判断常量是否被定义</h5>
 如果常量被重复定义以后，PHP解析器会发出“Constant XXX already defined”的警告。<br>
 eg:
+
 ```
 define(“PI”,3.14);
 $is2 = defined("PI");  //true
+
 ```
 **六、变量数据类型**<br>
 &emsp;在php中有8中数据类型，424组合；<br>
