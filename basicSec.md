@@ -78,56 +78,72 @@
 &emsp;&emsp;第三个参数：不为0删除元素的个数； <br>
 &emsp;&emsp;第四个参数：有就是要添加的内容； <br>
 &emsp;&emsp;eg： <br>
-&emsp;&emsp;添加：<br>
-&emsp;&emsp;$a=array('apple','banana','orange'); <br>
-&emsp;&emsp;array_splice($a,2,0,'grape'); <br>
-&emsp;&emsp;var_dump($a); <br>
-&emsp;&emsp;删除：<br>
-&emsp;&emsp;$a1=array("a"=>"red","b"=>"green","c"=>"blue","d"=>"yellow");<br>
-&emsp;&emsp;$a2=array("a"=>"purple","b"=>"orange");<br>
-&emsp;&emsp;array_splice($a1,0,2,$a2);<br>
-&emsp;&emsp;var_dump($a1);//删除和添加同时进行<br><br>
+&emsp;&emsp;添加：
+```
+$a=array('apple','banana','orange'); <br>
+array_splice($a,2,0,'grape'); <br>
+var_dump($a); <br>
+
+```
+&emsp;&emsp;删除：
+```
+$a1=array("a"=>"red","b"=>"green","c"=>"blue","d"=>"yellow");
+$a2=array("a"=>"purple","b"=>"orange");
+array_splice($a1,0,2,$a2);
+var_dump($a1);//删除和添加同时进行
+```
+
 &emsp;&emsp;4>_合并数组_<br>
 &emsp;&emsp;array_merge()-----将数组合并到一起，如果输入的数组中有相同的字符串键名，则该键名后面的值将覆盖前一个值。然而，如果数组包含数字键名，后面的值将不会覆盖原来的值，而是附加到后面。<br>
 &emsp;&emsp;语法：array_merge(数组1,数组2.....);<br>
-&emsp;&emsp;eg:<br>
-&emsp;&emsp;$arr1=array("apple"=>"苹果1","banana"=>"香蕉","pear"=>"梨");<br>
-&emsp;&emsp;$arr2=array("apple"=>"苹果2");<br>
-&emsp;&emsp;$mergeArr=array_merge($arr1,$arr2);<br>
-&emsp;&emsp;print_r($mergeArr);<br>
+&emsp;&emsp;eg:
+```
+$arr1=array("apple"=>"苹果1","banana"=>"香蕉","pear"=>"梨");
+$arr2=array("apple"=>"苹果2");
+$mergeArr=array_merge($arr1,$arr2);
+print_r($mergeArr);
+```
 &emsp;&emsp;输出：Array ( [apple] => 苹果2 [banana] => 香蕉 [pear] => 梨 );<br><br>
 &emsp;&emsp;5>in_array()-----在一个函数中汇总搜索一个特定的数组，数组存在则返回true，否则false；<br>
 &emsp;&emsp;语法：in_array(汇总数组,查询数组);<br>
-&emsp;&emsp;eg:<br>
-&emsp;&emsp;$fruit="apple";<br>
-&emsp;&emsp;$fruits=array("apple","banana","orange","pear");<br>
-&emsp;&emsp;if(in_array($fruit,$fruits)){<br>
-&emsp;&emsp;&emsp;echo '$fruit'."在数组中";<br>
-&emsp;&emsp;}<br><br>
+&emsp;&emsp;eg:
+```
+$fruit="apple";
+$fruits=array("apple","banana","orange","pear");
+if(in_array($fruit,$fruits)){
+echo '$fruit'."在数组中";
+}
+```
 &emsp;&emsp;6>_数组中查找指定键值_<br>
 &emsp;&emsp;array_key_exists()----一个数组中找到指定的键值，如果找到返回true，否则返回false<br>
 &emsp;&emsp;语法：array_key_exists(键值名,数组);<br>
-&emsp;&emsp;eg:<br>
-&emsp;&emsp; $fruits=array("apple"=>"苹果","banana"=>"香蕉","orange"=>"橙子","pear"=>"梨");<br>
-&emsp;&emsp;$true=array_key_exists("apple",$fruits);<br>
-&emsp;&emsp;if($true)<br>
-&emsp;&emsp;echo "存在";<br>
-&emsp;&emsp;else<br>
-&emsp;&emsp;echo "不存在";<br><br>
+&emsp;&emsp;eg:
+```
+ $fruits=array("apple"=>"苹果","banana"=>"香蕉","orange"=>"橙子","pear"=>"梨");
+$true=array_key_exists("apple",$fruits);
+if($true)
+echo "存在";
+else
+echo "不存在";
+```
 &emsp;&emsp;7>_获取数组中所有键值_<br>
 &emsp;&emsp;array_keys()----- 用于返回该数组的所有键值，产生一个新的数组。<br>
 &emsp;&emsp;语法：array_keys(数组名);<br>
-&emsp;&emsp;eg:<br>
-&emsp;&emsp;$fruits=array("apple"=>"苹果","banana"=>"香蕉","orange"=>"橙子","pear"=>"梨");<br>
-&emsp;&emsp;$keys=array_keys($fruits);<br>
-&emsp;&emsp;print_r($keys);<br>
+&emsp;&emsp;eg:
+```
+$fruits=array("apple"=>"苹果","banana"=>"香蕉","orange"=>"橙子","pear"=>"梨");
+$keys=array_keys($fruits);
+print_r($keys);
+```
 &emsp;&emsp;输出：Array ( [0] => apple [1] => banana [2] => orange [3] => pear )<br><br>
 &emsp;&emsp;8>_获取数组中的所有值_<br>
 &emsp;&emsp;arrar_values()-----获取一个数组的所有属性值。
 &emsp;&emsp;语法：arrar_values(数组名);<br>
-&emsp;&emsp;eg：<br>
-&emsp;&emsp;$fruits=array("apple"=>"苹果","banana"=>"香蕉","orange"=>"橙子","pear"=>"梨");<br>
-&emsp;&emsp;$values=array_values($fruits);<br>
-&emsp;&emsp;print_r($values);<br>
+&emsp;&emsp;eg：
+```
+$fruits=array("apple"=>"苹果","banana"=>"香蕉","orange"=>"橙子","pear"=>"梨");
+$values=array_values($fruits);
+print_r($values);
+```
 &emsp;&emsp;输出：Array ( [0] => 苹果 [1] => 香蕉 [2] => 橙子 [3] => 梨 )<br><br>
 &emsp;&emsp;

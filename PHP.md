@@ -45,9 +45,10 @@ PHP一种运行在web服务器端的编程语言。<br>
 <h5>如何判断常量是否被定义</h5>
 如果常量被重复定义以后，PHP解析器会发出“Constant XXX already defined”的警告。<br>
 eg:<br>
-define(“PI”,3.14);<br>
-$is2 = defined("PI");  //true<br>
-
+```
+define(“PI”,3.14);
+$is2 = defined("PI");  //true
+```
 **六、变量数据类型**<br>
 &emsp;在php中有8中数据类型，424组合；<br>
 &emsp;**4种标量类型：boolean、int、float、字符串**<br>
@@ -65,9 +66,11 @@ echo '你是什么?$a';-------输出：你是什么？$a<br>
 &emsp;**4种特殊类型：资源、空类型、回调类型、伪类型**<br>
 资源：主要为开发者提供操作资源的方法（对资源进行创建、使用以及释放）。<br>
 &emsp;eg:<br>
-&emsp;&emsp;$file=fopen("f.txt","r");   //打开文件<br>
-&emsp;&emsp;$con=mysql_connect("localhost","root","root");  //连接数据库<br>
-&emsp;&emsp;$img=imagecreate(100,100);//图形画布<br>
+```
+$file=fopen("f.txt","r");   //打开文件<br>
+$con=mysql_connect("localhost","root","root");  //连接数据库<br>
+$img=imagecreate(100,100);//图形画布<br>
+```
 空类型：表示一个变量没有被赋值。<br>
 出现空类型的三种情况：<br>
 &emsp;①声明变量但是没有赋值（初始化）<br>
@@ -112,7 +115,10 @@ $_num = 12.3456;<br>
 7、错误控制运算符<br>
 PHP中提供了一个错误控制运算符“@”，对于一些可能会在运行过程中出错的表达式时，我们不希望出错的时候给客户显示错误信息，这样对用户不友好。于是，可以将@放置在一个PHP表达式之前，该表达式可能产生的任何错误信息都被忽略掉；<br>
 &emsp;eg:<br>
+```
 define("PI", 3.14);<br>
 @define("PI", 3.12);<br>
-echo "出错了，错误原因是:".$php_errormsg;//出错了，错误原因是:Constant PI already defined<br>
+echo "出错了，错误原因是:".$php_errormsg;//出错了
+```
+错误原因是:Constant PI already defined<br>
 
