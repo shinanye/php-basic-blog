@@ -96,9 +96,13 @@ echo $replace;//I like PHP
 
 7>格式化字符串<br>
     sprintf() 函数把格式化的字符串写入变量中。
-%s | %s | %u 
+    %s    匹配字符串  %u  匹配整数    %f  匹配浮点
+
+Column A | Column B | Column C
 ---------|----------|---------
-匹配字符串 | 匹配整数 | 匹配浮点 
+ A1 | B1 | C1
+ A2 | B2 | C2
+ A3 | B3 | C3
 
     语法：sprintf(格式, 要转化的字符串)<br>
     返回值：格式化好的字符串
