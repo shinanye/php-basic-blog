@@ -125,4 +125,5 @@ define("PI", 3.14);<br>
 echo "出错了，错误原因是:".$php_errormsg;//出错了
 ```
 错误原因是:Constant PI already defined<br>
+    
 
