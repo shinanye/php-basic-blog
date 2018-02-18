@@ -1,7 +1,7 @@
 ## php入门五<br>
 ### 一、cookie<br>
 **1>cookie介绍**
->Cookie是存储在客户端浏览器中的数据，可以通过Cookie来跟踪与存储用户数据。一般情况下，Cookie通过HTTP headers从服务端返回到客户端。多数web程序都支持对Cookie的操作，因为Cookie是存在于HTTP的标头之中。<br>
+>Cookie是存储在客户端浏览器中的数据，可以通过Cookie来跟踪与存储用户数据。一般情况下，Cookie通过HTTPheaders从服务端返回到客户端。多数web程序都支持对Cookie的操作，因为Cookie是存在于HTTP的标头之中。<br>
 在PHP通过setcookie函数对Cookie进行设置，任何从浏览器发回的Cookie，PHP都会自动的将他存储在$_COOKIE的全局变量之中，因此我们可以通过$_COOKIE['key']的形式来读取某个Cookie值。<br>
 使用会话Session时通常使用Cookie来存储会话id来识别用户，Cookie具备有效期，当有效期结束之后，Cookie会自动的从客户端删除。<br>
 

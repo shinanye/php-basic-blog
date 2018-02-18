@@ -6,6 +6,7 @@ file_get_contents()<br>
 &emsp;语法file_get_contents($filename,$include_path,$context,$offset,$maxlen)<br>
 &emsp;返回值：返回读取数据或失败（false）<br>
 参数表
+
 参数 | 描述 
 ---------|----------
  filename | 读取的文件名称 
