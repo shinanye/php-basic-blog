@@ -7,7 +7,9 @@
 \~php\~<br>
 
 >如果模式中包含分隔符，则分隔符需要使用反斜杠（\）进行转义。<br>
+```
 $pattern = "/http:\/\//";
+```
 
 **2>元字符和转义符**
 
@@ -47,9 +49,9 @@ echo $match[0];  //结果为：0-1
 
 **4>字符串是否存在**
 >preg_match()<br>
-    意义：用来判断一类字符模式是否存在。<br>
-    语法：preg_match($pattern,$str)<br>
-    返回值:返回 pattern 的匹配次数。 它的值将是0次（不匹配）或1次，因为preg_match()在第一次匹配后 将会停止搜索。
+&emsp;意义：用来判断一类字符模式是否存在。<br>
+&emsp;语法：preg_match($pattern,$str)<br>
+&emsp;返回值:返回 pattern 的匹配次数。 它的值将是0次（不匹配）或1次，因为preg_match()在第一次匹配后 将会停止搜索。
 ```
 $p = '/love/';
 $str = "I love you too";
@@ -59,7 +61,7 @@ if (preg_match($p, $str)) {
 ```
 
 >preg_match_all()<br>
-    意义：搜索字符串中所有给定正则表达式的匹配结果并且将它们以指定顺序输出到matches中。在第一个匹配找到后, 子序列继续从最后一次匹配位置搜索.<br>
+&emsp;意义：搜索字符串中所有给定正则表达式的匹配结果并且将它们以指定顺序输出到matches中。在第一个匹配找到后, 子序列继续从最后一次匹配位置搜索.<br>
     语法：preg_match_all ($pattern,$str,$matchs,$flags)<br>
 ```
 $p = "/<tr><td>(.*?)<\/td>\s*<td>(.*?)<\/td>\s*<\/tr>/i";
@@ -77,9 +79,9 @@ print_r($matches);
 
 **5>正则表达式的搜索和替换**<br>
 preg_replace()<br>
-意义：搜索字符串中的特定字符或者替换指定的字符<br>
-语法：preg_replace($pattern, $replacement, $string)<br>
-返回值：如果string是一个数组， preg_replace()返回一个数组， 其他情况下返回一个字符串，如果发生错误，返回 NULL 。
+&emsp;意义：搜索字符串中的特定字符或者替换指定的字符<br>
+&emsp;语法：preg_replace($pattern, $replacement, $string)<br>
+&emsp;返回值：如果string是一个数组， preg_replace()返回一个数组， 其他情况下返回一个字符串，如果发生错误，返回 NULL 。
 ```
 $string = 'February 17, 2018';
 $pattern = '/(\w+) (\d+), (\d+)/i';

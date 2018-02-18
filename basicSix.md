@@ -1,10 +1,10 @@
-##PHP入门六<br>
-###文件系统<br>
+## php入门六<br>
+### 文件系统<br>
 **1>读取文件内容**<br>
 file_get_contents()<br>
-    意义：读取文件中的内容<br>
-    语法file_get_contents($filename,$include_path,$context,$offset,$maxlen)<br>
-    返回值：返回读取数据或失败（false）<br>
+&emsp;意义：读取文件中的内容<br>
+&emsp;语法file_get_contents($filename,$include_path,$context,$offset,$maxlen)<br>
+&emsp;返回值：返回读取数据或失败（false）<br>
 参数表
 参数 | 描述 
 ---------|----------
