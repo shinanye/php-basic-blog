@@ -44,7 +44,7 @@ imagedestroy($img);
 ```
 
 3. 绘制矩形<br>
-[imagerectangle](http://php.net/manual/zh/function.imagerectangle.php)<br>
+[imagerectangle()](http://php.net/manual/zh/function.imagerectangle.php)<br>
 &emsp;语法：imagerectangle ($image ,$x1 ,$y1 ,$x2 ,$y2 ,$col)
 ```
 $img = imagecreatetruecolor(200, 200);

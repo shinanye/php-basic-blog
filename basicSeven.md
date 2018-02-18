@@ -59,7 +59,7 @@ echo gmdate('Y-m-d H:i:s', time()); //输出为：2018-02-18 05:11:36 因为格�
 
 ```
 >中国时区是东八区，领先格林威治时间8个小时。<br>
-在使用格林威治时间时要执行代码最初加上date_default_timezone_set("PRC");
+在使用格林威治时间时要执行代码最初加上**date_default_timezone_set("PRC")**;
 
 
 
