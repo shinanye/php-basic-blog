@@ -37,6 +37,7 @@ if(file_get_contents(“http://www.baidu.com”)){
 >$content = file_get_contents('file.txt', null, null, 100, 500);
 
 **2>php中操作文件的方法**
+
 方法 | 描述 | 语法
 ---------|----------|----------
  [fopen](http://php.net/manual/en/function.fopen.php) | 打开文件 | fopen($filename,$mode,$include_path,$context) 
