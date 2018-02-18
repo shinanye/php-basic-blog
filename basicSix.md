@@ -138,4 +138,4 @@ function getsize($size, $format = 'kb'){
 
 **7>删除文件的方法**<br>
 unlink()<br>
-意义：用于删除指定的文件.<br>
+意义：用于删除指定的文件。<br>
