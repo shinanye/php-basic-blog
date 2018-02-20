@@ -4,15 +4,15 @@
 **1>php文件上传指令配置**
 >1. file_uploads=on|off<br> 
 &emsp;确定服务器上的PHP脚本是否可以接受文件上传。<br>
-2. max_execution_time=integer<br>
+>2. max_execution_time=integer<br>
 &emsp;PHP脚本在注册一个致命错误之前可以执行的最长时间，以秒为单位。<br>
-3. memory_limit=integer<br> 
+>3. memory_limit=integer<br> 
 &emsp;设置脚本可以分配到的最大内存，以MB为单位。这可以防止失控的脚本独占服务器内存。<br>
-4. upload_max_filesize=integer<br>
+>4. upload_max_filesize=integer<br>
 &emsp;设置上传文件最大大小，以MB为单位。<br>
-5. upload_tmp_dir=string<br>
+>5. upload_tmp_dir=string<br>
 &emsp;设置上传文件在处理之前必须存放在服务器的临时一个位置，直到文件移动到最终目的地为止。<br>
-6. post_max_size=integer<br>
+>6. post_max_size=integer<br>
 &emsp;确定通过POST方法可以接受的信息的最大大小，以MB为单位。<br>
 
 2>$_FILES数组
@@ -115,5 +115,5 @@ echo round(disk_free_space($drive)/1024/1024/1024,2).'GB';
 $drive = 'C:';
 echo round(disk_total_space($drive)/1024/1024/1027,2).'GB';
 ```
->**[文件上传案例]()**
+>**[文件上传案例](https://github.com/shinanye/file_upload/blob/master/upload_file.html)**
 
