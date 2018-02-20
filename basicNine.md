@@ -115,5 +115,5 @@ echo round(disk_free_space($drive)/1024/1024/1024,2).'GB';
 $drive = 'C:';
 echo round(disk_total_space($drive)/1024/1024/1027,2).'GB';
 ```
->**[文件上传案例](https://github.com/shinanye/file_upload/blob/master/upload_file.html)**
+>**[文件上传案例](https://github.com/shinanye/file_upload/blob/master)**
 
