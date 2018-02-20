@@ -49,14 +49,14 @@ METHOD="post":<br>
 3. 存储在$_FILES["file"]["size"]变量中的值就是文件的字节大小。<br>
 4. 存储在$_FILES["file"]["type"]变量中的值就是文件的MIME类型，例如：text/plain或image/gif。<br>
 5. 存储在$_FILES["file"]["error"]变量中的值将是任何与文件上载相关的错误代码。这是在PHP4.2.0中增加的新特性。<br>
-**error分别提供了一些数组常量：**<br>
+**error分别提供了一些数组常量：**
 + 0:表示没有发生错误。<br>
 + 1:表示上载文件的大小超出了约定值。文件大小的最大值是PHP配置文件中指定的，该指令是upload_max_filesize。<br>
 + 2:表示上载文件大小超出了HTML表单的MAX_FILE_SIZE元素所指定的最大值。<br>
 + 3:表示文件只被部分上载。<br>
 + 4:表示没有上载任何文件。<br>
 
-**3>上传函数**
+**3>上传函数**<br>
 PHP还提供了两个专门用于文件上传过程的函数：is_uploaded_file()和move_uploaded_file()。
 ```
 //确定是否上传文件
@@ -79,38 +79,38 @@ if (is_uploaded_file($_FILES["file"]["tmp_name"])) {
 将相关的数据组织为文件和目录等实体，程序员需要有一种方法来获得关于文件和目录的重要细节，如位置、大小、最后修改时间、最后访问时间和其他确定信息。<br>
 **1>目录操作**<br>
 + 获得当前文件路径
-    1. \__FILE__
-        当前文件路径+当前文件名
-    2. \__DIR__
-        当前文件路径
-    3. dirname(\__FILE__)
-        当前文件路径
-    4. basename(\__FILE__)
-        当前文件名
-    5. pathinfo(\__FILE__)
-        关于路径的信息的关联数组，其中包括：目录名、基本名和扩展名
-    6. realpath(\__FILE__)
-        绝对路径（前提 在当前项目下确实存在这个文件 才能获取绝对路径，只能读当前文件中对应的文件路径信息）
+&emsp;1. \__FILE__<br>
+&emsp;&emsp;当前文件路径+当前文件名<br>
+&emsp;2. \__DIR__<br>
+&emsp;&emsp;当前文件路径<br>
+&emsp;3. dirname(\__FILE__)<br>
+&emsp;&emsp;当前文件路径<br>
+&emsp;4. basename(\__FILE__)<br>
+&emsp;&emsp;当前文件名<br>
+&emsp;5. pathinfo(\__FILE__)<br>
+&emsp;&emsp;关于路径的信息的关联数组，其中包括：目录名、基本名和扩展名<br>
+&emsp;6. realpath(\__FILE__)<br>
+&emsp;&emsp;绝对路径（前提 在当前项目下确实存在这个文件 才能获取绝对路径，只能读当前文件中对应的文件路径信息）
 > \__FILE__ 和 \__DIR__是针对当前文件，dinrname()和basename()是针对任意文件路径
 
 **2>磁盘、目录和文件大小计算**<br>
-1. 文件大小
-    filesize($path)
-    计算该文件大小，字节为单位。
+1. 文件大小<br>
+&emsp;filesize($path)<br>
+&emsp;计算该文件大小，字节为单位。<br>
 ```
 $file = __FILE__;
 echo round(filesize($file)/1024).'KB';
 ```
-2. 磁盘可用空间大小
-    disk_free_space()
-    指定的目录所在磁盘分区的可用空间。
+2. 磁盘可用空间大小<br>
+&emsp;disk_free_space()<br>
+&emsp;指定的目录所在磁盘分区的可用空间。<br>
 ```
 $drive = 'C:';
 echo round(disk_free_space($drive)/1024/1024/1024,2).'GB';
 ```
-3. 磁盘的总容量
-    disk_total_space()
-    指定的目录所在磁盘分区的总容量。
+3. 磁盘的总容量<br>
+&emsp;disk_total_space()<br>
+&emsp;指定的目录所在磁盘分区的总容量。
 ```
 $drive = 'C:';
 echo round(disk_total_space($drive)/1024/1024/1027,2).'GB';
